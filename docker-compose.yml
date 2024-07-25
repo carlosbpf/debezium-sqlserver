@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+    ports:
+      - 1433:1433
+    environment:
+      MSSQL_AGENT_ENABLED: "true"
+      MSSQL_PID: Standard
+      SA_PASSWORD: P@ssw0rd
+      ACCEPT_EULA: "Y"
